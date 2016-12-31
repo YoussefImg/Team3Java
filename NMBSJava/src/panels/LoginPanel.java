@@ -14,7 +14,7 @@ import javax.swing.SwingConstants;
 
 import gui.LangageHandler;
 
-@SuppressWarnings({"serial", "unchecked", "rawtypes"})
+@SuppressWarnings("serial")
 public class LoginPanel extends JPanel {
 
 	private JLabel lblLangage;
@@ -26,6 +26,10 @@ public class LoginPanel extends JPanel {
 	private JCheckBox chAdmin;
 	private JButton btnLogin;
 	private JLabel lblResult;
+	
+	public String fixedLengthString(String string, int length) {
+	    return String.format("%1$"+length+ "s", string);
+	}
 	
 	public LoginPanel() {
 		setLayout(new GridLayout(1, 1, 5, 5));
@@ -43,7 +47,9 @@ public class LoginPanel extends JPanel {
 
 		JPanel usrn = new JPanel();
 		lblUsername = new JLabel();
-		LangageHandler.chooseLangageLbl(lblUsername, "username");
+		//LangageHandler.chooseLangageLbl(lblUsername, "username");
+		String username = fixedLengthString(LangageHandler.chooseLangage("username"), 25);
+		lblUsername.setText(username);
 		txtUsername = new JTextField();
 		txtUsername.setColumns(20);
 		usrn.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
@@ -52,7 +58,9 @@ public class LoginPanel extends JPanel {
 
 		JPanel usrp = new JPanel();
 		lblPassword = new JLabel();
-		LangageHandler.chooseLangageLbl(lblPassword, "password");
+		//LangageHandler.chooseLangageLbl(lblPassword, "password");
+		String password = fixedLengthString(LangageHandler.chooseLangage("password"), 25);
+		lblPassword.setText(password);
 		txtPassword = new JPasswordField();
 		txtPassword.setColumns(20);
 		usrp.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));

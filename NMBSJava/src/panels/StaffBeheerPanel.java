@@ -34,7 +34,8 @@ public class StaffBeheerPanel  extends JPanel{
 	private JLabel lblUsername;
 	private JLabel lblPassword;
 	private JLabel lblAdmin;
-
+	private JLabel lblCoordinates;
+	
 	private JTextField txtVoornaam;
 	private JTextField txtAchternaam;
 	private JTextField txtEmail;
@@ -44,6 +45,7 @@ public class StaffBeheerPanel  extends JPanel{
 	private JTextField txtPostcode;
 	private JTextField txtUsername;
 	private JPasswordField txtPassword;
+	private JTextField txtCoordinates;
 
 	private JButton btnVoegToe;
 	private JButton btnWijzig;
@@ -59,7 +61,7 @@ public class StaffBeheerPanel  extends JPanel{
 		setLayout(new GridLayout(1, 1, 5, 5));
 
 		JPanel content = new JPanel();
-		content.setLayout(new GridLayout(15,2,5,5));
+		content.setLayout(new GridLayout(16,2,5,5));
 
 		////1
 		lblTitel = new JLabel();
@@ -137,6 +139,13 @@ public class StaffBeheerPanel  extends JPanel{
 		txtPostcode.setColumns(1);
 		content.add(lblPostcode);
 		content.add(txtPostcode);
+		
+		lblCoordinates = new JLabel();
+		LangageHandler.chooseLangageLbl(lblCoordinates, "coordinates");
+		txtCoordinates = new JTextField();
+		txtCoordinates.setColumns(1);
+		content.add(lblCoordinates);
+		content.add(txtCoordinates);
 
 		///////9
 		lblStation = new JLabel();
@@ -302,6 +311,14 @@ public class StaffBeheerPanel  extends JPanel{
 
 	public JButton getBtnWijzig() {
 		return btnWijzig;
+	}
+
+	public JLabel getLblCoordinates() {
+		return lblCoordinates;
+	}
+
+	public JTextField getTxtCoordinates() {
+		return txtCoordinates;
 	}
 
 	

@@ -63,7 +63,7 @@ public class GUIController {
 				try {
 					frame = new GUIFrame();
 					frame.setVisible(true);
-					frame.setTitle("NMBSTeam - Login");
+					frame.setTitle(LangageHandler.chooseLangage("loginTitel"));
 					login();
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -107,7 +107,7 @@ public class GUIController {
 			public void run() {
 				try {
 					frame.getContentPane().removeAll();
-					frame.setTitle("NMBSTeam - Start");
+					frame.setTitle(LangageHandler.chooseLangage("startTitel"));
 					init();
 
 					// start syncing on hourly-base
@@ -284,7 +284,7 @@ public class GUIController {
 
 	private static void startRouteberekening() {
 		route = new RouteberekeningPanel();
-		frame.setTitle("NMBSTeam - Bereken route");
+		frame.setTitle(LangageHandler.chooseLangage("berekenTitel"));
 		frame.getContentPane().remove(frame.getContentPane().getComponentCount() - 1);
 		frame.getContentPane().add(route);
 		frame.setContentPane(frame.getContentPane());
@@ -293,7 +293,7 @@ public class GUIController {
 
 	private static void startTreinopzoeking() {
 		trein = new TreinopzoekingPanel();
-		frame.setTitle("NMBSTeam - Zoek trein");
+		frame.setTitle(LangageHandler.chooseLangage("treinTitel"));
 		frame.getContentPane().remove(frame.getContentPane().getComponentCount() - 1);
 		frame.getContentPane().add(trein);
 		frame.setContentPane(frame.getContentPane());
@@ -302,7 +302,7 @@ public class GUIController {
 
 	private static void startStationsbord() {
 		station = new StationboardPanel();
-		frame.setTitle("NMBSTeam - Bekijk het stationsbord");
+		frame.setTitle(LangageHandler.chooseLangage("stationsbordTitel"));
 		frame.getContentPane().remove(frame.getContentPane().getComponentCount() - 1);
 		frame.getContentPane().add(station);
 		frame.setContentPane(frame.getContentPane());
@@ -311,7 +311,7 @@ public class GUIController {
 
 	private static void startKoopBiljet() {
 		biljet = new BiljetPanel();
-		frame.setTitle("NMBSTeam - Koop Biljet");
+		frame.setTitle(LangageHandler.chooseLangage("biljetTitel"));
 		frame.getContentPane().remove(frame.getContentPane().getComponentCount() - 1);
 		frame.getContentPane().add(biljet);
 		frame.setContentPane(frame.getContentPane());
@@ -320,7 +320,7 @@ public class GUIController {
 	
 	private static void startKoopPass() {
 		pass = new PassPanel();
-		frame.setTitle("NMBSTeam - Koop Pass");
+		frame.setTitle(LangageHandler.chooseLangage("passTitel"));
 		frame.getContentPane().remove(frame.getContentPane().getComponentCount() - 1);
 		frame.getContentPane().add(pass);
 		frame.setContentPane(frame.getContentPane());
@@ -329,7 +329,7 @@ public class GUIController {
 
 	private static void startKoopAbonnement() {
 		abonnement = new NieuwAbonnementPanel();
-		frame.setTitle("NMBSTeam - Koop Abonnement");
+		frame.setTitle(LangageHandler.chooseLangage("aboTitel"));
 		frame.getContentPane().remove(frame.getContentPane().getComponentCount() - 1);
 		frame.getContentPane().add(abonnement);
 		frame.setContentPane(frame.getContentPane());
@@ -338,7 +338,7 @@ public class GUIController {
 
 	private static void startVerlengAbonnement() {
 		verlengAbonnement = new VerlengAbonnementPanel();
-		frame.setTitle("NMBSTeam - Koop Abonnement");
+		frame.setTitle(LangageHandler.chooseLangage("aboTitel"));
 		frame.getContentPane().remove(frame.getContentPane().getComponentCount() - 1);
 		frame.getContentPane().add(verlengAbonnement);
 		frame.setContentPane(frame.getContentPane());
@@ -347,7 +347,7 @@ public class GUIController {
 	
 	private static void startReservatieMaak() {
 		reservatie = new GroepsReservatiePanel();
-		frame.setTitle("NMBSTeam - Maak reservatie");
+		frame.setTitle(LangageHandler.chooseLangage("reservatieTitel"));
 		frame.getContentPane().remove(frame.getContentPane().getComponentCount() - 1);
 		frame.getContentPane().add(reservatie);
 		frame.setContentPane(frame.getContentPane());
@@ -356,7 +356,7 @@ public class GUIController {
 
 	private static void startVerlorenVoorwerpZoek() {
 		verlorenVoorwerpZoek = new VerlorenVoorwerpZoekPanel();
-		frame.setTitle("NMBSTeam - Zoek verloren voorwerp");
+		frame.setTitle(LangageHandler.chooseLangage("zoekTitel"));
 		frame.getContentPane().remove(frame.getContentPane().getComponentCount() - 1);
 		frame.getContentPane().add(verlorenVoorwerpZoek);
 		frame.setContentPane(frame.getContentPane());
@@ -365,7 +365,7 @@ public class GUIController {
 
 	private static void startVerlorenVoorwerpMaak() {
 		verlorenVoorwerpMaak = new VerlorenVoorwerpMaakPanel();
-		frame.setTitle("NMBSTeam - Maak verloren voorwerp");
+		frame.setTitle(LangageHandler.chooseLangage("maakTitel"));
 		frame.getContentPane().remove(frame.getContentPane().getComponentCount() - 1);
 		frame.getContentPane().add(verlorenVoorwerpMaak);
 		frame.setContentPane(frame.getContentPane());
@@ -374,7 +374,7 @@ public class GUIController {
 	
 	private static void startStaffBeheer() {
 		staff = new StaffBeheerPanel();
-		frame.setTitle("NMBSTeam - Voeg nieuwe medewerker");
+		frame.setTitle(LangageHandler.chooseLangage("voegTitel"));
 		frame.getContentPane().remove(frame.getContentPane().getComponentCount() - 1);
 		frame.getContentPane().add(staff);
 		frame.setContentPane(frame.getContentPane());
@@ -383,7 +383,7 @@ public class GUIController {
 		
 	private static void startPrijzenAanpassen() {
 		prijzenAanpassen = new PasPrijzenAanPanel();
-		frame.setTitle("NMBSTeam - Pas prijzen aan");
+		frame.setTitle(LangageHandler.chooseLangage("pasAan"));
 		frame.getContentPane().remove(frame.getContentPane().getComponentCount() - 1);
 		frame.getContentPane().add(prijzenAanpassen);
 		frame.setContentPane(frame.getContentPane());
@@ -392,7 +392,7 @@ public class GUIController {
 	
 	private static void startKlantZoek() {
 		klantZoek = new KlantZoekPanel();
-		frame.setTitle("NMBSTeam - Zoek klant");
+		frame.setTitle(LangageHandler.chooseLangage("klantZoekTitel"));
 		frame.getContentPane().remove(frame.getContentPane().getComponentCount() - 1);
 		frame.getContentPane().add(klantZoek);
 		frame.setContentPane(frame.getContentPane());
@@ -401,7 +401,7 @@ public class GUIController {
 	
 	private static void startKlantPasAan() {
 		klantPasAan = new KlantPasAanPanel();
-		frame.setTitle("NMBSTeam - Pas klant aan");
+		frame.setTitle(LangageHandler.chooseLangage("klantPasTitel"));
 		frame.getContentPane().remove(frame.getContentPane().getComponentCount() - 1);
 		frame.getContentPane().add(klantPasAan);
 		frame.setContentPane(frame.getContentPane());
